@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>考试管理器</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="/format.js"></script>
+</head>
+
+<body>
+  <div class="heading">
+    <h1 id="greetings-title">欢迎，阿斯蒂芬！</h1>
+    <br>
+    <div id="greetings-rand">这是随机生成的一句话</div>
+  </div>
+  <div class="main">
+    <div class="bar">
+      <div>考试：</div>
+      <!-- 我突然忘了upcoming怎么说 -->
+      <img src="/plus.svg" id="toggle-add-btn" alt="添加考试">
+      <div>三</div>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>全国土壤水勘探员专业测试</td>
+          <td>2月31日</td>
+          <td>0:00</td>
+          <td>23:61</td>
+        </tr>
+        <tr>
+          <td>阿斯蒂芬国际飞机驾驶测试</td>
+          <td>2月31日</td>
+          <td>0:00</td>
+          <td>23:61</td>
+        </tr>
+        <tr>
+          <td>国际IAEMPCBLABHBFBSHSSS (International Advanced Examination of Mathematics, Physics, Chemistry, Biology,
+            Language Arts, Basic Human Behaviors, Flying, and Ballistic Science for High School Students and Seniors)测试
+          </td>
+          <td>2月31日</td>
+          <td>0:00</td>
+          <td>23:61</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="mask"></div>
+  <div id="popup" class="popup">
+    <div id="close">
+      <img src="/cross.svg">
+    </div>
+    <h1>添加考试</h1>
+    <div>
+      考试名称:
+      <input id="test-name" type="text">
+    </div>
+    <div>
+      考试开始时间:
+      <input id="test-start" type="datetime-local">
+    </div>
+    <div>
+      考试结束时间:
+      <input id="test-end" type="datetime-local">
+    </div>
+    <div>
+      斯普瑞斯：
+      <textarea rows="3" id="test-desc"></textarea>
+    </div>
+    <button id="add-btn">提交</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="greetings.js"></script>
+</body>
+
+</html>
