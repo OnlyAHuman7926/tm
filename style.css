@@ -6,6 +6,7 @@
 body {
   background-color: var(--theme);
   margin: 0;
+  font-family: "Segoe UI", "Microsoft YaHei UI", sans-serif;
 }
 
 .heading {
@@ -88,7 +89,7 @@ tr:last-child>td:last-child {
 
 .mask {
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  /*background-color: rgba(0, 0, 0, 0.4);*/
   position: fixed;
   top: 0;
   left: 0;
@@ -109,7 +110,7 @@ tr:last-child>td:last-child {
   width: min(75%, 580px);
   height: min(75%, 360px);
   background-color: white;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 10px black;
   z-index: 20;
   border-radius: var(--base-len);
   display: none;
@@ -165,4 +166,33 @@ textarea {
   outline: none;
   font-size: inherit;
   font-family: inherit;
+}
+
+.float {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  z-index: 20;
+  border-radius: var(--base-len);
+  align-self: flex-start;
+  margin: 16px;
+  margin-top: 32px;
+  display: none;
+  z-index: -1;
+  overflow: hidden;
+  /* border radius when hovering */
+}
+
+.float>div {
+  padding: 12px;
+}
+
+.float>div:hover {
+  background-color: #adf5ff;
+}
+
+.on {
+  display: block;
+  z-index: 20;
 }
