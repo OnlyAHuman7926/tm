@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>测试</title>
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="test.css">
+  <script>window.test = JSON.parse(localStorage.getItem("tests"))[new URL(window.location.href).searchParams.get("id")];</script>
+</head>
+
+<body>
+  <h1 id="test-name">dsilf</h1>
+  <div>
+    <div>
+      <div id="test-desc">这是一个考试。i傲然四代机秘密哦i偶还是飞机零零hi了三个地方就第四次v哦客服才能和谐hiu欧斯夫与到访客户说说找你蹙额hi哦i侯斯杜父号码回收墨子u深度昏迷组合</div>
+      <button class="large">更改</button>
+    </div>
+    <div>
+      <div id="test-start">dsilf</div>
+      <div id="test-end">dsilf</div>
+    </div>
+  </div>
+  <script>
+    //自动更改文档内容
+    document.getElementById("test-name").innerText = test.name;
+    document.getElementById("test-start").innerText = new Date(Date.parse(test.start)).toLocaleString().slice(0, -3);
+    document.getElementById("test-end").innerText = new Date(Date.parse(test.end)).toLocaleString().slice(0, -3);
+    document.getElementById("test-desc").innerText = test.desc;
+  </script>
+</body>
+
+</html>

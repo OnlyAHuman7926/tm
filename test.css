@@ -1,0 +1,15 @@
+h1 {
+  padding: 48px;
+  margin: 0;
+}
+
+body>div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 48px;
+  gap: 16px;
+}
+
+body>div>div:last-child {
+  white-space: nowrap;
+}

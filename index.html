@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>考试管理器</title>
+  <link href="general.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
   <script src="format.js"></script>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -20,8 +22,8 @@
       <div>考试：</div>
       <!-- 我突然忘了upcoming怎么说 -->
       <img src="plus.svg" id="toggle-add-btn" alt="添加考试">
-      <div id="toggle-float-btn">擭</div>
-      <div class="float" id="sort-menu">
+      <img src="sort-icon.svg" id="toggle-float-btn" alt="排序">
+      <div class="float sort-float" id="sort-menu">
         <div data-val="start">开始时间</div>
         <div data-val="end">结束时间</div>
         <div data-val="name">名称（Unicode编码）</div>
@@ -53,7 +55,7 @@
     </table>
   </div>
   <div class="mask"></div>
-  <div id="popup" class="popup">
+  <div id="popup" class="float popup">
     <div id="close">
       <img src="cross.svg">
     </div>
@@ -74,10 +76,13 @@
       斯普瑞斯：
       <textarea rows="3" id="test-desc"></textarea>
     </div>
-    <button id="add-btn">提交</button>
+    <button id="add-btn" class="large" style="display: flex; align-items: center;">
+      <img src="/tick.svg" style="margin-right: 4px;">
+      添加
+    </button>
   </div>
 
-  <script src="script.js"></script>
+
   <script src="greetings.js"></script>
 </body>
 
