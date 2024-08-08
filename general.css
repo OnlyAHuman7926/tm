@@ -32,3 +32,16 @@ button.large {
 button.large:hover {
   box-shadow: 0.8px 0.8px 4.5px black;
 }
+
+button.large.secondary {
+  color: black;
+  background-color: white;
+  box-shadow: 0.5px 0.5px 0.5px black;
+  border: 1px solid #479dff;
+  transition: box-shadow .15s, background-color .15s;
+}
+
+button.large:hover {
+  box-shadow: 0.8px 0.8px 4.5px black;
+  background-color: #479dff;
+}

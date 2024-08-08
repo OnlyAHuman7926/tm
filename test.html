@@ -8,15 +8,20 @@
   <title>测试</title>
   <link rel="stylesheet" href="general.css">
   <link rel="stylesheet" href="test.css">
-  <script>window.test = JSON.parse(localStorage.getItem("tests"))[new URL(window.location.href).searchParams.get("id")];</script>
+  <script>
+    window.id = new URL(window.location.href).searchParams.get("id");
+    window.test = JSON.parse(localStorage.getItem("tests"))[window.id];
+  </script>
 </head>
 
 <body>
   <h1 id="test-name">dsilf</h1>
   <div>
-    <div>
-      <div id="test-desc">这是一个考试。i傲然四代机秘密哦i偶还是飞机零零hi了三个地方就第四次v哦客服才能和谐hiu欧斯夫与到访客户说说找你蹙额hi哦i侯斯杜父号码回收墨子u深度昏迷组合</div>
-      <button class="large">更改</button>
+    <div style="margin-bottom: 48px;">
+      <div id="test-desc" style="margin-bottom: 32px;">
+        这是一个考试。i傲然四代机秘密哦i偶还是飞机零零hi了三个地方就第四次v哦客服才能和谐hiu欧斯夫与到访客户说说找你蹙额hi哦i侯斯杜父号码回收墨子u深度昏迷组合</div>
+      <button class="large secondary">更改</button>
+      <button class="large" onclick="window.location.href =  `clock.html?id=${window.id}`;">开始</button>
     </div>
     <div>
       <div id="test-start">dsilf</div>
